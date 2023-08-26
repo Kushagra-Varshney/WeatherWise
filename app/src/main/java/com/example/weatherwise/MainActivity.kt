@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.SearchView
+import android.widget.Toast
 import com.example.weatherwise.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -60,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
 
             override fun onFailure(call: Call<WeatherApp>, t: Throwable) {
-                TODO("Not yet implemented")
+                Toast.makeText(this@MainActivity, "There might be an Error with the entered query.", Toast.LENGTH_LONG).show()
             }
 
         })
