@@ -55,13 +55,16 @@ class MainActivity : AppCompatActivity() {
                 val responseBody = response.body()
                 if(response.isSuccessful && responseBody != null) {
                     bindValues(response)
+                }
 
-            }
+                if(!response.isSuccessful) {
+                    Toast.makeText(this@MainActivity, "Invalid Location! Please try again.", Toast.LENGTH_SHORT).show()
+                }
 
         }
 
             override fun onFailure(call: Call<WeatherApp>, t: Throwable) {
-                Toast.makeText(this@MainActivity, "There might be an Error with the entered query.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@MainActivity, "There might be an Error with the API.", Toast.LENGTH_LONG).show()
             }
 
         })
