@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherWise</string>
+    <string name="api_key">34a4d18ef7e96a7a84c422c583754cc5</string>
+    <string name="base_url">https://api.openweathermap.org/data/2.5/</string>
+</resources>
